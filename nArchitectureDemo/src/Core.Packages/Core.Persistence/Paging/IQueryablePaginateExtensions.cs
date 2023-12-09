@@ -15,6 +15,7 @@ public static class IQueryablePaginateExtensions
         List<T> items = await source.Skip(index*size).Take(size).ToListAsync(cancellationToken).ConfigureAwait(false);
         Paginate<T> list = new()
         {
+            Size = size,
             Index = index,
             Count = count,
             Items = items,

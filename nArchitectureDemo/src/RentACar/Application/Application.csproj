@@ -11,12 +11,12 @@
     <Folder Include="Features\Brands\Commands\Update\" />
     <Folder Include="Features\Brands\Constants\" />
     <Folder Include="Features\Brands\Rules\" />
-    <Folder Include="Features\Brands\Profiles\" />
-    <Folder Include="Features\Brands\Queries\" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
     <PackageReference Include="MediatR" Version="12.1.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.14" />
   </ItemGroup>
 
   <ItemGroup>
@@ -24,6 +24,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Reference Include="Core.Application">
+      <HintPath>..\..\Core.Packages\Core.Application\bin\Debug\net7.0\Core.Application.dll</HintPath>
+    </Reference>
     <Reference Include="Core.Persistence">
       <HintPath>..\..\Core.Packages\Core.Persistence\bin\Debug\net7.0\Core.Persistence.dll</HintPath>
     </Reference>
